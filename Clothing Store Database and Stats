@@ -1,0 +1,25 @@
+--Create clothing store database
+
+CREATE TABLE clothing (id INTEGER PRIMARY KEY, name TEXT, color TEXT, price INTEGER, size TEXT);
+
+INSERT INTO clothing VALUES (1, "tshirt", "red", 7, "small");
+INSERT INTO clothing VALUES (2, "tshirt", "blue", 9, "medium");
+INSERT INTO clothing VALUES (3, "tshirt", "black", 7, "large");
+INSERT INTO clothing VALUES (4, "long pant", "blue", 15, "small");
+INSERT INTO clothing VALUES (5, "regular pant", "blue", 17, "small");
+INSERT INTO clothing VALUES (6, "jean short", "black", 13, "medium");
+INSERT INTO clothing VALUES (7, "skirt", "white", 10, "large");
+INSERT INTO clothing VALUES (8, "skirt", "pink", 10, "medium");
+INSERT INTO clothing VALUES (9, "sock", "whtie", 5, "small");
+INSERT INTO clothing VALUES (10, "sock", "black", 5, "small");
+INSERT INTO clothing VALUES (11, "crop top", "tan", 10, "small");
+INSERT INTO clothing VALUES (12, "crop top", "black", 14, "medium");
+INSERT INTO clothing VALUES (13, "tank top", "white", 8, "medium");
+INSERT INTO clothing VALUES (14, "tank top", "black", 12, "large");
+INSERT INTO clothing VALUES (15, "tank top", "purple", 9, "small");
+
+--display the database ordered by price
+SELECT * FROM clothing ORDER BY price ASC;
+
+--what clothings are greater than the price of $10
+SELECT * FROM clothing WHERE price > 10;
