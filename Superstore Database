@@ -1,0 +1,26 @@
+--first prompt: orders the items by price
+select *
+from superstore 
+order by price; 
+
+--second prompt: show statistics about item prices such as sum, avg, min, max, count
+select sum(price), item_name
+from superstore 
+group by item_name; 
+
+select min(price), item_name
+from superstore
+group by item_name;
+
+select max(price), item_name
+from superstore
+group by item_name;
+
+--third prompt: write own query that shows statistics about price for items in "Kitchen Supplies"
+select avg(price)
+from superstore
+where category="Kitchen Supplies"; 
+
+select max(price)
+from superstore
+where category="Kitchen Supplies" 
